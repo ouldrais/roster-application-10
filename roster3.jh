@@ -1,0 +1,70 @@
+
+entity Team {
+	key Long
+}
+
+entity TeamPlan {
+	availability Boolean
+}
+
+entity Resource {
+	key Long
+	firstName String
+	lastName String
+	teamRole String
+	exchangeAllowed Boolean
+}
+
+entity ResourcePlan {
+	availability Boolean
+}
+
+entity ResourceTraining {
+	status String
+	level String
+	trainer String
+	activeFrom Instant
+	activeto Instant
+
+}
+
+entity Training {
+	key Long
+	description String
+}
+
+entity PositionRequirement {
+	mandatoty String
+}
+
+entity Position {
+	key Long
+	leadership String
+}
+
+entity Department {
+	key Long
+	team String
+}
+
+entity Shift {
+	key Long
+	shiftStart Instant
+	shiftEnd Instant
+	type String
+}
+
+entity ShiftDemand {
+	count Long
+}
+
+entity ShiftTemplate {
+	key Long
+	shiftStart Instant
+	shiftEnd Instant
+	type String
+}
+
+relationship ManyToOne {
+	Resource{team(key)} to Team
+}

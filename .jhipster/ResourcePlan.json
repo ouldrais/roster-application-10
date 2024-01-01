@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20240101183317"
+  },
+  "applications": "*",
+  "entityTableName": "resource_plan",
+  "fields": [
+    {
+      "fieldName": "availability",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "ResourcePlan",
+  "relationships": [],
+  "searchEngine": "no"
+}
